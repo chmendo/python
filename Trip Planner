@@ -1,0 +1,31 @@
+# In this project, I am creating a trip planner using funtions with multiple parameters
+
+# welcome message
+def trip_planner_welcome(name):
+  print("Welcome to tripplanner v1.0, " + name)
+
+trip_planner_welcome("Pan")
+
+# time
+def estimated_time_rounded(estimated_time):
+  rounded_time = round(estimated_time)
+  return rounded_time
+
+estimate = estimated_time_rounded(1.0)
+
+# generate messages for user's planned trip
+def destination_setup(origin, destination, estimated_time, mode_of_transport="Car"):
+  print("Your trip starts off in " + origin)
+  print("And you are traveling to " + destination)
+  print("You will be traveling by " + mode_of_transport)
+  print("It will take approximately " + str(estimated_time) + " hours")
+
+destination_setup("Haji Lane", "Jurong Bird Park", estimate)
+
+
+# output should be:
+Welcome to tripplanner v1.0, Pan
+Your trip starts off in Haji Lane
+And you are traveling to Jurong Bird Park
+You will be traveling by Car
+It will take approximately 1 hours
